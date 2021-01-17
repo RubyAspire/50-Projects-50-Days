@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap');
+:root{
+    --primary-color: #3498db;
+    --secondary-color: #e0e0e0;
+}
+*{
+    box-sizing: border-box;/*so that when we add a border or any padding to an element it doesnt affect the width of the element*/
+}
+
+body{
+    background-color: #f6f7fb;
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    display: flex;/*to center all the elements*/
+    align-items: center;
+    justify-content: center;
+    height: 100vh;/*giving the flexbbox height so the items can all be centered in the middle 
+    vh is the viewport height so we are making the body the height of the browser window*/
+}
+
+.container{
+    text-align: center;
+}
+
+.progress-container{
+    position: relative;
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 25px;
+    max-width: 100%;
+    width: 20em;
+}
+
+/*whe using pseudo selector ::before or ::after you have to use content:''*/
+.progress-container::before{
+    content: "";
+    position: absolute;
+    background-color: var(--secondary-color);
+    height: 4px;
+    width: 100%;
+    top: 50%;
+    z-index: -1;
+    transform: translateY(-50%);
+    transition: 0.4s ease;
+}
+
+.progress{
+    position: absolute;
+    background-color: var(--primary-color);
+    height: 4px;
+    width: 0;
+    top: 50%;
+    z-index: -1;
+    transform: translateY(-50%);
+    transition: 0.4s ease;
+}
+
+.circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    width: 30px;
+    border: 2.5px solid var(--secondary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.circle.active{
+    border-color: var(--primary-color);
+}
+
+.btn{
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1em;
+    padding: 0.5em 2em;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.btn:active{
+    transform: scale(1);
+}
+
+.btn:focus{
+    outline: 0;
+}
+
+.btn:disabled{
+    background-color: var(--secondary-color);
+    cursor: not-allowed;
+}
