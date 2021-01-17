@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap');
+
+*{
+    box-sizing: border-box;/*so that when we add a border or any padding to an element it doesnt affect the width of the element*/
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    display: flex;/*to center all the elements*/
+    align-items: center;
+    justify-content: center;
+    height: 100vh;/*giving the flexbbox height so the items can all be centered in the middle 
+    vh is the viewport height so we are making the body the height of the browser window*/
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    width: 90vw;
+}
+
+.card{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 5;
+    height: 90vh;
+    margin: 10px;
+    border-radius: 50px;
+    opacity: 0.5;
+    transition: flex 700ms ease-in, opacity 700ms ease-in 0.2s;
+    position: relative;
+    cursor: pointer;
+}
+
+.card.active{
+    flex: 30;
+    opacity: 1;
+}
+
+.card h3{
+    position: absolute;
+    bottom: 0.5em;
+    color: white;
+    margin: 0;
+    left: 1em;
+    font-size: 25px; 
+    opacity: 0;
+    transition: opacity 700ms ease-in 0.4s;
+}
+
+.card.active h3{
+    opacity: 1;
+}
+
+@media (max-width: 500px){
+    .container{
+        width: 100vw;
+    }
+    .card:nth-child(4),.card:nth-child(5){
+        display: none;
+    }
+}
