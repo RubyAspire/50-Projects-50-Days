@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap');
+
+*{
+    box-sizing: border-box;/*so that when we add a border or any padding to an element it doesnt affect the width of the element*/
+}
+
+body{
+    background: linear-gradient(90deg, #017899, #87ffff);
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    display: flex;/*to center all the elements*/
+    align-items: center;
+    justify-content: center;
+    height: 100vh;/*giving the flexbbox height so the items can all be centered in the middle 
+    vh is the viewport height so we are making the body the height of the browser window*/
+}
+
+.search{
+    position: relative;
+    height: 50px;
+}
+
+.input{
+    font-size: 18px;
+    border: 0;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    width: 50px;
+    height: 50px;
+    transition: width 0.3s ease;
+}
+
+.btn{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #87ffff;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover{
+    background-color: #017899;
+    color: #fff;
+}
+
+.search.active .input{
+    width: 200px;
+}
+
+.search.active .btn{
+    transform: translateX(195px);
+}
+
