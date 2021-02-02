@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap');
+
+*{
+    box-sizing: border-box;/*so that when we add a border or any padding to an element it doesnt affect the width of the element*/
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    display: flex;/*to center all the elements*/
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #4682b4;
+    height: 150px;
+    width: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    transform: translateX(400%);
+    transition: transform 0.4s ease-in;
+}
+
+.box:nth-of-type(even){
+    transform: translateX(-400%);
+}
+
+.box.show{
+    transform: translateX(0);
+}
