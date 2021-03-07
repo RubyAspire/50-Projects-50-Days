@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap');
+
+*{
+    box-sizing: border-box;/*so that when we add a border or any padding to an element it doesnt affect the width of the element*/
+}
+
+body{
+    background-color: steelblue;
+    color: #fefefe;
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    display: flex;/*to center all the elements*/
+    align-items: center;
+    justify-content: center;
+    height: 100vh;/*giving the flexbbox height so the items can all be centered in the middle 
+    vh is the viewport height so we are making the body the height of the browser window*/
+    flex-direction: column;
+}
+
+.container{
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px 40px;/*use padding instead of heoght of width to keep the content center in the container since its just a login page from what i have surmised*/
+    border-radius: 10px;
+}
+
+.container h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container a{
+    text-decoration: none;
+}
+
+.txt-reg{
+    color: lightblue;
+}
+
+.txt-reg:hover{
+    color: #bceeff;
+}
+
+.form-control{
+    position: relative;
+    width: 300px;
+    margin: 10px 0px 50px;
+}
+
+.form-control  label{
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+.form-control input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid #fff;
+    padding:10px 0 10px;
+    color: #fefefe;
+    width: 100%;
+    font-size: 18px;
+}
+
+.form-control input:focus{
+    outline: 0;
+    border-bottom-color: lightblue;
+}
+
+.btn{
+    display: inline-block;
+    cursor: pointer;
+    background-color: steelblue;
+    border-radius: 3px;
+    color: #fefefe;
+    padding: 10px;
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+}
+
+.btn:hover{
+    background-color: lightblue;
+    color: #101010;
+}
+
+.btn:focus{
+    outline: 0;
+}
+
+.btn:active{
+    transform: scale(.98);
+}
+
+.text{
+    margin-top: 30px;
+}
+
+
+.form-control label span{
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.5, -0.5, 0.25, 1.5);/*cubic bezier defines a curve , a curve representing speed like in unity when messing with animation you can set the way something transitions
+    it takes four point p0 p1 p2 p3 p0 and p3 are the start and ends of the curve*/
+
+}
+
+.form-control input:focus + label span{
+    color: lightblue;
+    transform: translateY(-20px);
+}
