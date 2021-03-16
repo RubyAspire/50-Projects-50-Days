@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap');
+
+*{
+    box-sizing: border-box;/*so that when we add a border or any padding to an element it doesnt affect the width of the element*/
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    display: flex;/*to center all the elements*/
+    align-items: center;
+    justify-content: center;
+    height: 100vh;/*giving the flexbbox height so the items can all be centered in the middle 
+    vh is the viewport height so we are making the body the height of the browser window*/
+    flex-direction: column;
+}

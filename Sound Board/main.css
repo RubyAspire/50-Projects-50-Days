@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+} 
+
+body{
+    display:flex;
+    height: 100vh;
+    justify-content: center;
+    align-items:center;
+    overflow: hidden;
+    margin: 0;
+    background-color: rgb(150, 120, 150);
+}
+
+.btn{
+    cursor: pointer;
+    padding: 1.5rem;
+    margin: 1rem;
+    font-size: 18px;
+    border:0;
+    border-radius: 5px;
+    color: #fafafa;
+    background-color: rgba(100, 100, 100, 0.8);
+}
+
+.btn:focus{
+    outline: 0;
+}
+
+.btn:hover{
+    background-color: rgb(50,50,50);
+}
