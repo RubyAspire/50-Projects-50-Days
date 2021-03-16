@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap');
+
+*{
+    box-sizing: border-box;/*so that when we add a border or any padding to an element it doesnt affect the width of the element*/
+}
+
+body{
+    background-color: #5f33ff;
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    display: flex;/*to center all the elements*/
+    align-items: center;
+    justify-content: center;
+    height: 100vh;/*giving the flexbbox height so the items can all be centered in the middle 
+    vh is the viewport height so we are making the body the height of the browser window*/
+    flex-direction: column;
+    padding: 20px;
+}
+
+.container{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.2);
+    padding:50px 20px;
+    max-width: 100%;
+    width: 800px;
+    text-align: center;
+}
+
+h3{
+    opacity: 0.5;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.joke{
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    line-height: 60px;
+    margin: 50px auto;
+    max-width: 600px;
+}
+
+
+.btn{
+    cursor: pointer;
+    background-color: #9f68e0;
+    border: 0;
+    border-radius: 10px;
+    padding: 15px 50px;
+    font-size: 16px;
+    color: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover{
+    background-color: #9650e0;
+}
+
+.btn:focus{
+    outline: 0;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
