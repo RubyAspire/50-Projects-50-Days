@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap');
+
+*{
+    box-sizing: border-box;/*so that when we add a border or any padding to an element it doesnt affect the width of the element*/
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+}
+
+h1{
+    text-align: center;
+    margin: 20px 0 30px;
+}
+
+.faq-container{
+    margin: auto;
+    max-width: 600px;
+}
+
+.faq{
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    border: 1px solid #9fa4a8;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 30px;
+    transition:all 0.3s ease;
+}
+
+.faq.active{
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.faq.active::before,
+.faq.active::after{
+    content: '\f075';
+    font-family: 'Font Awesome 5 Free';
+    color: #2ecc71;
+    font-size: 7rem;
+    opacity: 0.2;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+}
+
+.faq.active::before{
+    color: #3498db;
+    top: -10px;
+    left: -30px;
+    transform: rotateY(180deg);
+}
+
+.faq-title{
+    margin: 10px 0 0;
+    max-width: 450px;
+}
+
+.faq-text{
+    display: none;
+}
+
+.faq.active .faq-text{
+    display: block;
+}
+
+.faq .faq-toggle{
+    position: absolute;
+    left: 87%;
+    color: #2ecc71;
+    top: 30%;
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+}
+
+.faq-toggle:focus{
+    outline: 0;
+}
+
+.faq-toggle .fa-times{
+    display: none;
+}
+
+.faq.active .faq-toggle .fa-times{
+    display: inline;
+    color: #44aaee;
+}
+
+.faq.active .faq-toggle .fa-chevron-down{
+    display: none;
+}
