@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@100;300;400;700&display=swap');
+
+*{
+    box-sizing: border-box;/*so that when we add a border or any padding to an element it doesnt affect the width of the element*/
+}
+
+body{
+    background-color: #2b88f0;
+    font-family: 'Kiwi Maru', sans-serif;
+    margin:0;
+    display: flex;/*to center all the elements*/
+    align-items: center;
+    justify-content: center;
+    height: 100vh;/*giving the flexbbox height so the items can all be centered in the middle 
+    vh is the viewport height so we are making the body the height of the browser window*/
+    flex-direction: column;
+}
+
+h3{
+    color: #fff;
+    margin: 10px 0 20px;
+    text-align: center;
+}
+
+.container{
+    width: 600px;
+}
+
+textarea{
+    font-family: inherit;
+    border: none;
+    margin: 0 0 20px;
+    display: block;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.tag{
+    display: inline-block;
+    background-color: #f0923b;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin: 0 5px 10px 0;
+    font-size: 14px;
+}
+
+.tag.highlight{
+    background-color: #273c75;
+}
