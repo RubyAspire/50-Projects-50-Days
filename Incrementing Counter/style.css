@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;700&display=swap');
+
+*{
+    box-sizing: border-box;/*so that when we add a border or any padding to an element it doesnt affect the width of the element*/
+}
+
+body{
+    background-color: #8e44ad;
+    font-family: 'Roboto Mono', sans-serif;
+    margin:0;
+    display: flex;/*to center all the elements*/
+    align-items: center;
+    justify-content: center;
+    height: 100vh;/*giving the flexbbox height so the items can all be centered in the middle 
+    vh is the viewport height so we are making the body the height of the browser window*/
+    color: #fff;
+}
+
+.counter-container{
+    margin: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter{
+    font-size: 60px;
+    margin-top: 10px;
+}
+/*meaning anything under 580px will take in properties under the media query*/
+@media(max-width: 580px){
+    body{
+        flex-direction: column;
+    }
+}
+
